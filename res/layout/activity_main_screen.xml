@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     tools:context=".Main_screen" >
 
-    <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="ToggleButton" />
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -42,5 +34,14 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_alignParentBottom="true"
         android:text="@string/done" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:text="ToggleButton" />
 
 </RelativeLayout>

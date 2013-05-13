@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
-import android.widget.EditText;
 import android.widget.Toast;
 
 public class Call_Receiver extends BroadcastReceiver{
@@ -25,12 +24,13 @@ public class Call_Receiver extends BroadcastReceiver{
 				Toast.makeText(arg0, "Missed call", Toast.LENGTH_LONG).show();
 				++Main_screen.num_missed_calls;
 				//if there are five calls
-				if (Main_screen.num_missed_calls>=5){
+				if (Main_screen.num_missed_calls>=1){
 					
 					//send response
+					Toast.makeText(arg0, "sending msg", Toast.LENGTH_LONG).show();
 					String cell_num = Main_screen.tm.getLine1Number();
 					SmsManager sm = SmsManager.getDefault();
-					sm.sendTextMessage(cell_num, null, response, null, null);
+					sm.sendTextMessage("5556"/*cell_num*/, null, response+(Main_screen.username), null, null);
 					
 					//reset number of missed calls
 					Main_screen.num_missed_calls = 0;

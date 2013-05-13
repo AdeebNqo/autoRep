@@ -5,8 +5,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Main_screen extends Activity {
 
@@ -23,9 +26,16 @@ public class Main_screen extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_screen);
 		
+		//Toast.makeText(getBaseContext(), "before tm", Toast.LENGTH_LONG).show();
 		tm = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
 		username_text = (EditText)findViewById(R.id.editText1);
 		save_button = (Button)findViewById(R.id.button1);
+		save_button.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getBaseContext(), "Done", Toast.LENGTH_LONG).show();
+				username = username_text.getText().toString();
+			}});
 	}
 
 	@Override
