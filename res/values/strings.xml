@@ -6,5 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="username">Umsebenzisi</string>
     <string name="done">gqibile</string>
+    <string name="alternative">enye i-number</string>
+    <string name="name">igama</string>
+    <string name="number">i-number</string>
 
 </resources>

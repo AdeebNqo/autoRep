@@ -1,47 +1,65 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Main_screen" >
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/toggleButton1"
+    android:layout_centerVertical="true" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="125dp"
-        android:layout_marginLeft="23dp"
-        android:text="@string/username" />
+    <LinearLayout
+        android:layout_width="322dp"
+        android:layout_height="354dp"
+        android:gravity="center"
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignTop="@+id/textView1"
-        android:layout_marginTop="39dp"
-        android:ems="10" >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username" />
 
-        <requestFocus />
-    </EditText>
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/name" >
 
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignParentBottom="true"
-        android:text="@string/done" />
+            <requestFocus />
+        </EditText>
+        
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alternative" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="130dp"
-        android:text="ToggleButton" />
+        <EditText
+            android:id="@+id/alt_num"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/number" >
 
-</RelativeLayout>
+            <requestFocus />
+        </EditText>
+        
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/done" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+      
+</FrameLayout>
