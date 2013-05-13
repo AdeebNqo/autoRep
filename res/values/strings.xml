@@ -4,5 +4,7 @@
     <string name="app_name">autoRep</string>
     <string name="menu_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="username">Umsebenzisi</string>
+    <string name="done">gqibile</string>
 
 </resources>
